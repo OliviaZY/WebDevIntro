@@ -9,7 +9,3 @@ request('http://jasonplaceholder.typicode.com/users/1', function(error, response
         console.log(parsedData);
     }
 });
-
-// app.listen(process.env.PORT, process.env.IP, function() {
-//     console.log("Movie App has started!");
-// })
