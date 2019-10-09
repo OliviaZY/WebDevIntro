@@ -11,6 +11,11 @@ var metMax = false;
 
 var reset = document.getElementById("res");
 
+function myFunction() {
+	max = document.querySelector("input").value;
+  	document.getElementById("finalScore").innerHTML = max;
+}
+
 p1.addEventListener("click", function() {
 	if(!metMax) {
 		score1++;
