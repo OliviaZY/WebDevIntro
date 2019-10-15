@@ -1,5 +1,6 @@
 // alert("CONNECTED!");
-var colors = generateColors(6);
+var numSquare = 6;
+var colors = generateColors(numSquare);
 
 var squares = document.querySelectorAll(".boxes");
 var pickedColor = selectColor();
@@ -15,7 +16,7 @@ for(var i = 0; i< squares.length; i++) {
             changeColor(clickedColor);
             h1.style.backgroundColor = pickedColor;
         }else {
-            this.style.backgroundColor = "#808080";
+            this.style.backgroundColor = "steelblue";
             
             mes.textContent = "try again!";
         }
@@ -23,8 +24,8 @@ for(var i = 0; i< squares.length; i++) {
 }
 
 var newColor = document.querySelector("button");
-newColor.addEventListener("click", function() {
-    colors = generateColors(6);
+newColor.addEventListener("click", function(){
+    colors = generateColors(numSquare);
     pickedColor = selectColor();
     document.querySelector('.rgbTitle').innerHTML = pickedColor;
     for(var i = 0; i< squares.length; i++) {
@@ -42,7 +43,39 @@ newColor.addEventListener("click", function() {
             }
         });
     }
+    h1.style.backgroundColor = "steelblue";
 });
+
+
+var easyBtn = document.querySelector("#easyBtn");
+var hardBtn = document.querySelector("#hardBtn");
+easyBtn.addEventListener("click", function(){
+    easyBtn.classList.add("selected");
+    hardBtn.classList.remove("selected");
+    numSquare = 3;
+    colors = generateColors(numSquare);
+    pickedColor = selectColor();
+    document.querySelector('.rgbTitle').innerHTML = pickedColor;
+    for(var i = 0; i< squares.length; i++) {
+        if(colors[i])
+            squares[i].style.backgroundColor = colors[i];
+        else
+            squares[i].style.display = "none";
+    }
+});
+hardBtn.addEventListener("click", function(){
+    hardBtn.classList.add("selected");
+    easyBtn.classList.remove("selected");
+    numSquare = 3;
+    colors = generateColors(numSquare);
+    pickedColor = selectColor();
+    document.querySelector('.rgbTitle').innerHTML = pickedColor;
+    for(var i = 0; i< squares.length; i++) {
+        squares[i].style.backgroundColor = colors[i];
+        squares[i].style.display = "block";
+    }
+});
+
 function changeColor(color) {
     for(var i = 0; i< squares.length; i++) {
         squares[i].style.backgroundColor = color;

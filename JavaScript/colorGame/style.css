@@ -1,10 +1,26 @@
  body {
     background-color: #808080;
+    margin: 0;
+    font-family: "Montserrat", "Avenir";
  }
 
  h1{
     color: white;
+    text-align: center;
+    background-color: steelblue;
+    margin:0;
+    font-weight: normal;
+    line-height: 1.1;
+    padding: 20px 0;
  }
+.rgbTitle {
+    font-size: 200%;
+}
+
+.message {
+    display: inline-block;
+    width: 20%;
+}
 
  .container {
     margin: 0 auto;
@@ -18,10 +34,21 @@
     margin: 1.66%;
  }
 
+ button {
+     border: none;
+     background: none;
+     text-transform: uppercase;
+     height: 100%;
+     font-weight: 700;
+     color: steelblue;
+ }
+
  #stripe {
      background-color: rgb(165, 160, 160);
      height: 40px;
      text-align: center;
  }
 
- .selected
+.selected {
+     background-color: blue;
+ }
