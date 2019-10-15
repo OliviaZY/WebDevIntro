@@ -1,0 +1,27 @@
+ body {
+    background-color: #808080;
+ }
+
+ h1{
+    color: white;
+ }
+
+ .container {
+    margin: 0 auto;
+    max-width: 600px;;
+ }
+ .boxes {
+    width: 30%;
+    float: left;
+    margin-bottom:30%;
+    background-color: powderblue;
+    margin: 1.66%;
+ }
+
+ #stripe {
+     background-color: rgb(165, 160, 160);
+     height: 40px;
+     text-align: center;
+ }
+
+ .selected
