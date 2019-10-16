@@ -23,7 +23,7 @@
 }
 
  .container {
-    margin: 0 auto;
+    margin: 20px auto;
     max-width: 600px;;
  }
  .boxes {
@@ -32,6 +32,8 @@
     margin-bottom:30%;
     background-color: powderblue;
     margin: 1.66%;
+    border-radius: 15%;
+    transition: background 1s;
  }
 
  button {
@@ -41,6 +43,11 @@
      height: 100%;
      font-weight: 700;
      color: steelblue;
+     transition: all 0.5s;
+ }
+ button:hover {
+     color:white;
+        background: steelblue;
  }
 
  #stripe {

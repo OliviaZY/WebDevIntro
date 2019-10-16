@@ -16,7 +16,7 @@ for(var i = 0; i< squares.length; i++) {
             changeColor(clickedColor);
             h1.style.backgroundColor = pickedColor;
         }else {
-            this.style.backgroundColor = "steelblue";
+            this.style.backgroundColor = "#808080";
             
             mes.textContent = "try again!";
         }
